@@ -14,12 +14,24 @@ public class MainController {
 
 
 	
-	@GetMapping("/")
+	@GetMapping()
+	public Map<String, String> getHomeMain() {
+		
+		Map<String, String> returnMap = new HashMap<>();
+		returnMap.put("status", "Success");
+		returnMap.put("method", "getHomeMain");
+		
+		
+		
+		return returnMap;
+	}
+	
+	@GetMapping("home")
 	public Map<String, String> getHome() {
 		
 		Map<String, String> returnMap = new HashMap<>();
 		returnMap.put("status", "Success");
-		
+		returnMap.put("method", "getHome");
 		
 		
 		return returnMap;
