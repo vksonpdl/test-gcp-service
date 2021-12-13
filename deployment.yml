@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-gcp-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-gcp-service
+  template:
+    metadata:
+      labels:
+        app: test-gcp-service
+    spec:
+      containers:
+        - name: app
+          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          imagePullPolicy: Always
+ 
