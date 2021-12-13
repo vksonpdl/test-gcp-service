@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-gcp-service
+  name: test-gcp-service-v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test-gcp-service
+      app: test-gcp-service-v1
   template:
     metadata:
       labels:
-        app: test-gcp-service
+        app: test-gcp-service-v1
     spec:
       containers:
         - name: app
